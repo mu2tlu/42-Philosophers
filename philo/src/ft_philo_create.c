@@ -70,7 +70,7 @@ static int	ft_thread_create_single(t_philo *philo)
 		usleep(10);
 		if (i % 2 == 1)
 			if (pthread_create(&philo[i].thread, NULL, (void *)ft_life_cycle,
-					&philo[i]))
+					&philo[i]) != 0)
 				return (write(2, "Thread Error!\n", 14));
 		i++;
 	}
