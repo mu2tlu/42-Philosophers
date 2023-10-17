@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_philo_create.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vparlak <vparlak@student.42kocaeli.com.    +#+  +:+       +#+        */
+/*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/08 20:12:19 by vparlak           #+#    #+#             */
-/*   Updated: 2023/10/10 20:17:12 by vparlak          ###   ########.fr       */
+/*   Created: 2023/10/08 20:12:19 by mumutlu           #+#    #+#             */
+/*   Updated: 2023/10/13 16:25:26 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static int	ft_thread_create_single(t_philo *philo)
 		usleep(10);
 		if (i % 2 == 1)
 			if (pthread_create(&philo[i].thread, NULL, (void *)ft_life_cycle,
-					&philo[i]))
+					&philo[i]) != 0)
 				return (write(2, "Thread Error!\n", 14));
 		i++;
 	}

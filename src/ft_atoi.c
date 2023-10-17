@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vparlak <vparlak@student.42kocaeli.com.    +#+  +:+       +#+        */
+/*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 17:32:03 by vparlak           #+#    #+#             */
-/*   Updated: 2023/10/10 16:21:04 by vparlak          ###   ########.fr       */
+/*   Created: 2023/09/25 17:32:03 by mumutlu           #+#    #+#             */
+/*   Updated: 2023/10/17 12:30:57 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int	ft_atoi(const char *str)
 	}
 	else if (*str == '+')
 		str++;
-	if (*str == '-' || *str == '+' || !ft_isdigit(*str))
-		return (-1);
+	if (*str == '-' || *str == '+')
+		return (0);
 	while (ft_isdigit(*str) == 1)
 	{
 		result = (result * 10) + (*str - '0');

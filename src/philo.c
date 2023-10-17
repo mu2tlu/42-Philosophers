@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   philo.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vparlak <vparlak@student.42kocaeli.com.    +#+  +:+       +#+        */
+/*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/08 20:02:47 by vparlak           #+#    #+#             */
-/*   Updated: 2023/10/09 19:12:16 by vparlak          ###   ########.fr       */
+/*   Created: 2023/10/08 20:02:47 by mumutlu           #+#    #+#             */
+/*   Updated: 2023/10/17 12:35:35 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 static int	ft_destroy_mutex(t_philo *philo)
 {
@@ -76,21 +77,21 @@ static int	ft_init_vars(t_vars *vars, char **argv)
 	if (vars->n_of_philo < 1)
 		return (write(2, "Philosophers number should at least 1.\n", 39), 1);
 	vars->t_to_die = ft_atoi(argv[1]);
-	if (vars->t_to_die < 0)
-		return (write(2, "Time to die number should at least 0.\n", 38), 1);
+	if (vars->t_to_die <= 0)
+		return (write(2, "Time to die number should at least 1.\n", 38), 1);
 	vars->t_to_eat = ft_atoi(argv[2]);
-	if (vars->t_to_eat < 0)
-		return (write(2, "Time to eat number should at least 0.\n", 38), 1);
+	if (vars->t_to_eat <= 0)
+		return (write(2, "Time to eat number should at least 1.\n", 38), 1);
 	vars->t_to_sleep = ft_atoi(argv[3]);
-	if (vars->t_to_sleep < 0)
-		return (write(2, "Time to sleep number should at least 0.\n", 40), 1);
+	if (vars->t_to_sleep <= 0)
+		return (write(2, "Time to sleep number should at least 1.\n", 40), 1);
 	if (ft_atoi(argv[4]) == 0)
 		vars->eat_per_phil = -1;
 	else
 	{
 		vars->eat_per_phil = ft_atoi(argv[4]);
 		if (vars->eat_per_phil < 0)
-			return (write(2, "N_of_t_each philo should at least 0.\n", 37), 1);
+			return (write(2, "N_of_t_each philo should at least 1.\n", 37), 1);
 	}
 	return (0);
 }
@@ -100,6 +101,9 @@ int	main(int argc, char *argv[])
 	t_philo	*philo;
 	t_vars	vars;
 
+	if (diff_char_check(argv + 1))
+		return (printf("Wrong argument\n"), 1);
+		
 	if (argc == 5 || argc == 6)
 	{
 		if (ft_init_vars(&vars, &argv[1]))

@@ -2,10 +2,11 @@ NAME = philo
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -pthread -fsanitize=thread
 
 SRC=	src/ft_atoi.c \
 		src/ft_calloc.c \
+		src/argv_check.c \
 		src/ft_life_cycle.c \
 		src/ft_mutex_check.c \
 		src/ft_philo_create.c \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vparlak <vparlak@student.42kocaeli.com.    +#+  +:+       +#+        */
+/*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 13:40:01 by vparlak           #+#    #+#             */
-/*   Updated: 2023/10/10 20:18:59 by vparlak          ###   ########.fr       */
+/*   Created: 2023/09/25 13:40:01 by mumutlu           #+#    #+#             */
+/*   Updated: 2023/10/17 12:29:39 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,9 @@ typedef struct s_philo
 
 void	*ft_calloc(size_t count, size_t size);
 int		ft_atoi(const char *str);
+
+int		space_or_empty_check(char	**av);
+int		diff_char_check(char	**av);
 
 int		ft_philo_create(t_philo *philo);
 void	*ft_life_cycle(t_philo *philo);

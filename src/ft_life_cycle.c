@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_life_cycle.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vparlak <vparlak@student.42kocaeli.com.    +#+  +:+       +#+        */
+/*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/08 20:21:40 by vparlak           #+#    #+#             */
-/*   Updated: 2023/10/10 20:07:25 by vparlak          ###   ########.fr       */
+/*   Created: 2023/10/08 20:21:40 by mumutlu           #+#    #+#             */
+/*   Updated: 2023/10/13 16:24:59 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,9 @@ void	*ft_life_cycle(t_philo *philo)
 {
 	while (1)
 	{
-		if (ft_current_time(philo) != 0 || ft_died_check(philo) != 0)
+		if (ft_current_time(philo) != 0)
+			return (NULL);
+		if (ft_died_check(philo) != 0)
 			return (NULL);
 		printf("%d %d is thinking\n", philo->current_time, philo->mutex.i_m);
 		if (ft_fork_race(philo) != 0)
