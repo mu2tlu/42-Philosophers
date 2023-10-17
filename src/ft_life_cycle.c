@@ -6,12 +6,13 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 20:21:40 by mumutlu           #+#    #+#             */
-/*   Updated: 2023/10/13 16:24:59 by mumutlu          ###   ########.fr       */
+/*   Updated: 2023/10/17 12:42:57 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 #include <stdio.h>
+#include <unistd.h>
 
 static int	ft_sleep(t_philo *philo)
 {

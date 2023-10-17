@@ -6,11 +6,12 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 20:30:57 by mumutlu           #+#    #+#             */
-/*   Updated: 2023/10/13 17:50:38 by mumutlu          ###   ########.fr       */
+/*   Updated: 2023/10/17 12:43:10 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
+#include <unistd.h>
 
 static int	ft_get_local_time(void)
 {

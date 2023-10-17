@@ -6,12 +6,13 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 13:42:05 by mumutlu           #+#    #+#             */
-/*   Updated: 2023/10/13 16:25:22 by mumutlu          ###   ########.fr       */
+/*   Updated: 2023/10/17 12:43:02 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 #include <stdio.h>
+#include <unistd.h>
 
 static int	ft_died_set(t_philo *philo)
 {

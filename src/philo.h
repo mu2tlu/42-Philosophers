@@ -6,7 +6,7 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 13:40:01 by mumutlu           #+#    #+#             */
-/*   Updated: 2023/10/17 12:29:39 by mumutlu          ###   ########.fr       */
+/*   Updated: 2023/10/17 12:42:51 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <pthread.h>
 # include <sys/time.h>
-# include <unistd.h>
 
 typedef struct timeval	t_time;
 

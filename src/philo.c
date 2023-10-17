@@ -6,13 +6,13 @@
 /*   By: mumutlu <mumutlu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 20:02:47 by mumutlu           #+#    #+#             */
-/*   Updated: 2023/10/17 12:35:35 by mumutlu          ###   ########.fr       */
+/*   Updated: 2023/10/17 12:43:45 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 #include <stdlib.h>
-#include <stdio.h>
+#include <unistd.h>
 
 static int	ft_destroy_mutex(t_philo *philo)
 {
@@ -102,7 +102,7 @@ int	main(int argc, char *argv[])
 	t_vars	vars;
 
 	if (diff_char_check(argv + 1))
-		return (printf("Wrong argument\n"), 1);
+		return (write(2, "Wrong argument\n", 15), 1);
 		
 	if (argc == 5 || argc == 6)
 	{
